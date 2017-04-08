@@ -49,9 +49,9 @@ class TableViewCategory: UITableViewController {
     
     func getRandomColor() -> UIColor{
         //Generate between 0 to 1
-        let red:CGFloat = CGFloat(drand48())
-        let green:CGFloat = CGFloat(drand48())
-        let blue:CGFloat = CGFloat(drand48())
+        let red:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let green:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
+        let blue:CGFloat = CGFloat(Float(arc4random()) / Float(UINT32_MAX))
         
         return UIColor(red:red, green: green, blue: blue, alpha: 1.0)
     }
